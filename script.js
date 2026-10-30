@@ -206,7 +206,7 @@ const pages = [
     {
         images: [
             "bog'chani bitirdi.jpg",
-            "bog'chani bitirdi 2.jpg",
+            "bogcha 3.jpg",
             "7 yosh.jpg"
         ]
     },
