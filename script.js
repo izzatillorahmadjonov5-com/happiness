@@ -1,4 +1,7 @@
 
+const backgroundMusic = document.getElementById("backgroundMusic");
+let musicStarted = false;
+
 // ==========================================
 // 1. TRANSLATIONS
 // ==========================================
@@ -473,15 +476,20 @@ function renderPage() {
 // ==========================================
 
 function nextPage() {
-
-    if (currentPage < pages.length - 1) {
-
-        currentPage++;
-
-        renderPage();
-
+    if (!musicStarted) {
+        backgroundMusic.play()
+            .then(() => {
+                musicStarted = true;
+            })
+            .catch(error => {
+                console.log("Music playback error:", error);
+            });
     }
 
+    if (currentPage < pages.length - 1) {
+        currentPage++;
+        renderPage();
+    }
 }
 
 
