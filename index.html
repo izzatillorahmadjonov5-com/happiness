@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffe4ed">
+
+    <title>Наша история любви | 19 лет вместе</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="hearts" id="hearts"></div>
+
+    <!-- Header -->
+    <header class="top-bar">
+
+        <button id="backBtn" class="back-btn" onclick="previousPage()">
+            ← <span data-i18n="back">Назад</span>
+        </button>
+
+        <button id="langBtn" class="lang-btn" onclick="toggleLanguage()">
+            O'Z
+        </button>
+
+    </header>
+
+
+    <!-- Intro page -->
+    <main>
+
+        <section class="intro active" id="intro">
+
+            <div class="intro-content">
+
+                <div class="small-heart">♥</div>
+
+                <p class="intro-subtitle" data-i18n="introSubtitle">
+                    История нашей семьи
+                </p>
+
+                <h1 class="years">
+                    2007 <span>—</span> 2026
+                </h1>
+
+                <div class="intro-line"></div>
+
+                <h2 data-i18n="introTitle">
+                    19 лет вместе
+                </h2>
+
+                <p class="intro-description" data-i18n="introDescription">
+                    19 лет любви, счастья и незабываемых воспоминаний.
+                </p>
+
+                <button class="next-btn" onclick="nextPage()">
+                    <span data-i18n="start">Начать</span> →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Story pages -->
+        <section class="story-section" id="storySection">
+
+            <div class="story-container">
+
+                <div class="page-counter" id="pageCounter"></div>
+
+                <div class="photo-gallery" id="photoGallery"></div>
+
+                <div class="story-text">
+
+                    <div class="decorative-heart">♥</div>
+
+                    <p id="storyText"></p>
+
+                </div>
+
+                <div class="navigation">
+
+                    <button class="next-btn" id="nextBtn" onclick="nextPage()">
+                        Далее →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Image lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+
+        <button class="close-lightbox" onclick="closeLightbox(event)">
+            &times;
+        </button>
+
+        <a
+            class="download-btn"
+            id="downloadBtn"
+            download
+            onclick="event.stopPropagation()"
+        >
+            ↓ <span data-i18n="download">Скачать</span>
+        </a>
+
+        <img id="lightboxImage" src="" alt="Семейная фотография">
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p data-i18n="footer">
+            Сделано с любовью ♥
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
