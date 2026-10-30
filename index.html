@@ -23,15 +23,24 @@
     <!-- Header -->
     <header class="top-bar">
 
-        <button id="backBtn" class="back-btn" onclick="previousPage()">
-            ← <span data-i18n="back">Назад</span>
-        </button>
+    <button id="backBtn" class="back-btn" onclick="previousPage()">
+        ← <span data-i18n="back">Назад</span>
+    </button>
+
+    <div class="header-controls">
+
+        <div class="music-controls">
+            <button id="musicPauseBtn" title="Pause music">⏸</button>
+            <button id="musicMuteBtn" title="Mute music">🔊</button>
+        </div>
 
         <button id="langBtn" class="lang-btn" onclick="toggleLanguage()">
             O'Z
         </button>
 
-    </header>
+    </div>
+
+</header>
 
 
     <!-- Intro page -->
@@ -137,7 +146,6 @@
 </audio>
 
     <script src="script.js"></script>
-
 
 </body>
 </html>

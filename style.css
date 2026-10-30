@@ -425,3 +425,32 @@ footer {
         top: 12px;
     }
 }
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.music-controls {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.music-controls button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 105, 145, 0.3);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    color: #d94b78;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.music-controls button:hover {
+    background: #f8c4d5;
+    transform: scale(1.08);
+}

@@ -2,6 +2,36 @@
 const backgroundMusic = document.getElementById("backgroundMusic");
 let musicStarted = false;
 
+const musicPauseBtn = document.getElementById("musicPauseBtn");
+const musicMuteBtn = document.getElementById("musicMuteBtn");
+
+// Pause va Play tugmasi
+musicPauseBtn.addEventListener("click", () => {
+
+    if (backgroundMusic.paused) {
+
+        backgroundMusic.play();
+        musicPauseBtn.textContent = "⏸";
+
+    } else {
+
+        backgroundMusic.pause();
+        musicPauseBtn.textContent = "▶";
+
+    }
+
+});
+
+// Ovozini o'chirish va yoqish tugmasi
+musicMuteBtn.addEventListener("click", () => {
+
+    backgroundMusic.muted = !backgroundMusic.muted;
+
+    musicMuteBtn.textContent =
+        backgroundMusic.muted ? "🔇" : "🔊";
+
+});
+
 // ==========================================
 // 1. TRANSLATIONS
 // ==========================================
